@@ -1,0 +1,91 @@
+
+.navbar{
+    width: 100%;
+    background-color: var(--bg);
+
+}
+.navbar-nav {
+    background-color: #525357;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column; /* Set flex-direction to column */
+
+  }
+  
+  .nav-item {
+    width: 100%;
+    display: block;
+    
+  }
+  .icon-button {
+    --button-size: calc(var(--nav-size) * 1);
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: #484a4d;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-button:hover{
+    filter: brightness(1.2);
+}
+
+.dropdown {
+    /* I will want this to take up a whole side to the left so that you can actually see and scroll when it shows up */
+    /* I want several buttons or stables you can click on and you will enter that stable so you can add people and tasks and such */
+    /* so this is somewhat temporary */
+    /* Gonna need to fix this slightly im pretty sure since its an absolute */
+    /* I Should be able to have the info on a big thing on the left side so any menu that opens there takes up that spot. */
+    /* Then after that I move the menu item that I had either to the top of the lsit or I simply translate it up there and then when I exit I translate it back */
+ 
+    width: 100%;
+    height: fit-content;
+    box-sizing:border-box;
+    display: block;
+    justify-content: space-evenly;
+    background: var(--bg);
+    border:var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    
+}
+.menu-item{
+    /* display flex + align-items: center in the context of a row means vertical aligment */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+}
+.menu-item:hover{
+    background-color: #525357;
+}
+/* automaticaly sets right icon to the right side*/
+.icon-right{
+    margin-left: auto;
+}
+.menu{
+    width: 100%;
+}
+/* When main becomes true */
+.menu-primary-enter{
+    position: relative;
+    /* transform: translateX(-110%); */
+}
+/* after 500 ms this is active*/
+.menu-primary-enter-active{
+    transform: translateX(0%);
+    transform: all var(--speed) ease;
+
+}
+.menu-primary-enter-exit{
+    position:absolute;
+}
+.menu-primary-enter-exit-active{
+    transform: translateX(-110%);
+    transform: all var(--speed) ease;
+}
