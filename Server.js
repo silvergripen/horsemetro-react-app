@@ -33,8 +33,8 @@ app.get("/readscheduledates", async (req, res) => {
 });
 app.post("/writetocalendarscheduledate", async (req, res) => {
     try {
-        const { content, date } = req.body;
-        const newScheduleDate = new CalendarScheduleDate({ content, date });
+        const { DateStart, DateEnd, Title, Description, FK_UserId } = req.body;
+        const newScheduleDate = new CalendarScheduleDate({ DateStart, DateEnd, Title, Description, FK_UserId });
         await newScheduleDate.save();
         res.status(201).json(newScheduleDate);
     } catch (error) {
@@ -42,6 +42,7 @@ app.post("/writetocalendarscheduledate", async (req, res) => {
         res.status(500).json({ error: "Server error while saving schedule date" });
     }
 });
+
 
 
 app.post("/writetodatabase", async (req, res) => {

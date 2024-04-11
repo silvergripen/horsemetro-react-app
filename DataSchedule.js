@@ -14,13 +14,12 @@ const CalendarScheduleDateSchema = new mongoose.Schema({
         required: true
     },
     Description: {
-        type: String,
-        required: true
+        type: String
     },
-    Description: {
+    FK_UserId: {
         type: String,
+        default: ''
     }
-
 });
 
 module.exports = mongoose.model("CalendarScheduleDate", CalendarScheduleDateSchema);
