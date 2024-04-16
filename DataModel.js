@@ -1,3 +1,5 @@
+// This is just a test.
+// It can be ignored
 const mongoose = require("mongoose");
 
 const DataSchema = new mongoose.Schema({
