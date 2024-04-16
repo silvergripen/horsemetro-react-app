@@ -19,7 +19,7 @@ export const DatePickStable = () => {
                 return;
             }
             
-            // Make the POST request with the required fields
+            // Make the POST request
             await axios.post('http://localhost:5000/writetocalendarscheduledate', {
                 DateStart: dateStart,
                 DateEnd: dateEnd,
